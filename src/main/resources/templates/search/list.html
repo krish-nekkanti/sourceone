@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  layout:decorator="layout">
+  <head>
+    <title>Health : Image Viewer</title>
+  </head>
+  <body>
+    <h1 layout:fragment="header">Health : Image Viewer</h1>
+    <div layout:fragment="content" class="container">
+      
+       <div class="pull-left">
+        <a href="#" th:href="@{/search}">Search</a>
+       </div>
+      
+    </div>
+  </body>
+</html>
