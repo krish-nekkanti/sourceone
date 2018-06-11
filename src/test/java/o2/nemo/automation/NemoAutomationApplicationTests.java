@@ -13,6 +13,7 @@ import com.ah8.app.ivservice.AH8DicomApplication;
 @WebAppConfiguration
 public class NemoAutomationApplicationTests {
 
+	
 	@Test
 	public void contextLoads() {
 	}
