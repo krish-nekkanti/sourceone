@@ -17,6 +17,7 @@ import com.ah8.app.ivservice.model.Dicom;
 import com.ah8.app.ivservice.model.DicomPatient;
 import com.ah8.app.ivservice.model.ExamImage;
 import com.ah8.app.ivservice.model.PatientExam;
+import com.ah8.app.ivservice.model.Payments;
 import com.ah8.app.ivservice.service.IDicomMeataDataService;
 
 @RestController
@@ -92,4 +93,11 @@ public class DicomController {
 		log.debug("DicomController--->getAnnotationByImageID -----> End");
 		return Response.ok(imageAnnotation, MediaType.APPLICATION_JSON).build();
 	}
+	
+	@RequestMapping("/getAllPayments")
+	public List<Payments> getAllPayments() {
+		log.debug("DicomController--->getAnnotationByImageID -----> start");
+		return dicomMeataDataService.getAllPayments();
+	}
+	
 }

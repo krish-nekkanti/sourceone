@@ -15,7 +15,6 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot' 
-apply plugin: 'io.spring.dependency-management'
 apply plugin: 'groovy'
 
 
@@ -32,8 +31,8 @@ jar {
 
     
     
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -47,6 +46,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jersey")
 	compile("org.hibernate:hibernate-validator")
 	compile("org.mariadb.jdbc:mariadb-java-client:1.1.7")
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+	
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     
     testCompile("org.springframework.boot:spring-boot-starter-test")

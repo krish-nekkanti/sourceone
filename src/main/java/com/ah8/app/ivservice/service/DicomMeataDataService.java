@@ -10,6 +10,7 @@ import com.ah8.app.ivservice.model.Dicom;
 import com.ah8.app.ivservice.model.DicomPatient;
 import com.ah8.app.ivservice.model.ExamImage;
 import com.ah8.app.ivservice.model.PatientExam;
+import com.ah8.app.ivservice.model.Payments;
 
 @Component
 public class DicomMeataDataService implements IDicomMeataDataService {
@@ -93,5 +94,10 @@ public class DicomMeataDataService implements IDicomMeataDataService {
 		ExamImage  examImage =  dicomDao.getDicomImageDataByID(imageId);
 		String imageAnnotation = examImage.annotation;
 		return imageAnnotation;
+	}
+
+	@Override
+	public List<Payments> getAllPayments() {
+		return dicomDao.getAllPayments();
 	}
 }

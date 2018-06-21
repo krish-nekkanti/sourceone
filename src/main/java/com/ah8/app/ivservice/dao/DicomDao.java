@@ -21,6 +21,7 @@ import com.ah8.app.ivservice.model.Dicom;
 import com.ah8.app.ivservice.model.DicomPatient;
 import com.ah8.app.ivservice.model.ExamImage;
 import com.ah8.app.ivservice.model.PatientExam;
+import com.ah8.app.ivservice.model.Payments;
 
 
 @Repository
@@ -192,6 +193,16 @@ public class DicomDao{
 			return null;
 		}
 		return examImageList;
+	}
+	
+	public List<Payments> getAllPayments() {
+		TypedQuery<Payments> paymentQuery = entityManager.createQuery("SELECT paymments FROM Payments paymments " ,Payments.class);
+	
+		List<Payments> paymentsList = paymentQuery.getResultList();
+		if(paymentsList==null || paymentsList.isEmpty()){
+			return null;
+		}
+		return paymentsList;
 	}
 	
 }

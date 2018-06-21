@@ -6,6 +6,7 @@ import com.ah8.app.ivservice.model.Dicom;
 import com.ah8.app.ivservice.model.DicomPatient;
 import com.ah8.app.ivservice.model.ExamImage;
 import com.ah8.app.ivservice.model.PatientExam;
+import com.ah8.app.ivservice.model.Payments;
 
 public interface IDicomMeataDataService {
 	
@@ -28,4 +29,6 @@ public interface IDicomMeataDataService {
 	public List<ExamImage> getImagesByExamID(Integer examId);
 
 	public String getAnnotationByImageID(Integer imageId);
+
+	public List<Payments> getAllPayments();
 }
